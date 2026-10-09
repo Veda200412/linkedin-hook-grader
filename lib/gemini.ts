@@ -78,7 +78,7 @@ export async function generateRewrites(hook: string): Promise<string[]> {
   Output only valid JSON matching the required schema.`;
 
   const response = await ai.models.generateContent({
-    model: "gemini-3.5-flash-lite",
+    model: "gemini-2.0-flash",
     contents: [{ role: "user", parts: [{ text: prompt }] }],
     config: {
       responseMimeType: "application/json",
